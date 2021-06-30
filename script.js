@@ -19,3 +19,10 @@ function imageLoaded() {
     loader.hidden = true;
   }
 }
+
+// Helper Function to Set Attributes on DOM Elements
+function setAttributes(element, attributes) {
+  for (const key in attributes) {
+    element.setAttribute(key, attributes[key]);
+  }
+}
