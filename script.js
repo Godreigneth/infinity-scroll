@@ -53,3 +53,14 @@ function displayPhotos() {
     imageContainer.appendChild(item);
   });
 }
+
+// Get photos from Unsplash API
+async function getPhotos() {
+  try {
+    const response = await fetch(apiUrl);
+    photosArray = await response.json();
+    displayPhotos();
+  } catch (error) {
+    // Catch Error Here
+  }
+}
